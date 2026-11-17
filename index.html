@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LicitaAI · Portfólio do Projeto de Estágio</title>
+  <meta name="description" content="Portfólio do projeto de estágio LicitaAI: plataforma web para monitoramento e organização de editais públicos, desenvolvida na Extractta.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='none' stroke='%232563eb' stroke-width='3'/%3E%3Cpath d='M10 16l4 4 8-8' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="topo-conteudo">
+      <a class="marca" href="#inicio"><span class="escudo">✓</span><span>Licita<strong>AI</strong></span></a>
+      <nav class="navegacao" aria-label="Seções do portfólio">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#casos-de-uso">Casos de uso</a>
+        <a href="#documentacao">Documentação</a>
+        <a href="#telas">Telas e vídeo</a>
+        <a href="#relatorio">Relatório</a>
+        <a href="#aluno">Identificação</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. PÁGINA INICIAL -->
+  <section class="inicio" id="inicio">
+    <div class="inicio-conteudo">
+      <p class="chapeu">Portfólio do Projeto de Estágio · Engenharia de Software</p>
+      <h1>Licita<strong>AI</strong></h1>
+      <p class="subtitulo">Plataforma web para monitoramento e organização de editais públicos.</p>
+
+      <p><strong>Objetivo:</strong> centralizar os editais acompanhados pela equipe da Extractta, reunir as informações de cada oportunidade em um só lugar e dar visibilidade aos prazos de abertura, reduzindo o tempo gasto na triagem manual.</p>
+
+      <p>O LicitaAI foi desenvolvido durante o estágio na Extractta, empresa de tecnologia, dados e automação. Nesta etapa foram implementados o gerenciamento de usuários e o gerenciamento de editais, com autenticação, controle de acesso por perfil e um painel que destaca os editais com abertura nos próximos 30 dias. As próximas etapas preveem a importação automática de editais do PNCP, alertas de oportunidade e relatórios gerados com apoio de inteligência artificial.</p>
+
+      <div class="acoes">
+        <a class="botao botao-claro" href="#sobre">Conhecer o projeto</a>
+        <a class="botao botao-vazado" href="docs/relatorio-estagio-licitaai.pdf" target="_blank" rel="noopener">Relatório de Estágio (PDF)</a>
+      </div>
+
+      <div class="numeros">
+        <div><strong>6</strong><span>casos de uso previstos</span></div>
+        <div><strong>2</strong><span>casos de uso implementados</span></div>
+        <div><strong>30 dias</strong><span>janela de prazo do painel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- 2. SOBRE O PROJETO -->
+    <section class="secao" id="sobre">
+      <div class="secao-cabecalho">
+        <span class="numero-secao">02</span>
+        <h2>Sobre o projeto</h2>
+      </div>
+
+      <h3>O problema</h3>
+      <p>Com a Lei nº 14.133/2021, a divulgação das contratações públicas passou a ser centralizada no Portal Nacional de Contratações Públicas (PNCP). Na prática, porém, identificar oportunidades continua sendo um trabalho manual: cada órgão publica no seu ritmo, os documentos chegam em formatos diferentes e a leitura inicial de cada edital exige o tempo de um profissional qualificado.</p>
+      <p>Na Extractta, a busca, o download e a análise dos editais eram feitos à mão, e o controle ficava em planilhas e anotações espalhadas. O efeito mais grave era a perda de oportunidades compatíveis por causa do prazo, e não por decisão técnica.</p>
+
+      <figure class="figura">
+        <a href="img/diagramas/workflow-as-is.png" target="_blank" rel="noopener"><img src="img/diagramas/workflow-as-is.png" alt="Diagrama BPMN do processo manual de monitoramento de editais, com as raias do Analista e do Diretor" loading="lazy"></a>
+        <figcaption><strong>Processo atual (AS-IS)</strong> do monitoramento manual de editais na Extractta, modelado em BPMN.</figcaption>
+      </figure>
+
+      <div class="destaque">
+        <p><strong>O ponto crítico:</strong> o prazo de abertura só é verificado depois da análise manual e do registro em planilha. Quando o prazo já expirou, todo esse trabalho termina na atividade "Registrar edital perdido". O painel do LicitaAI ataca exatamente esse gargalo.</p>
+      </div>
+
+      <h3>Tecnologias utilizadas</h3>
+      <div class="grade grade-4">
+        <div class="cartao tecnologia">
+          <h4>Back-end</h4>
+          <div class="etiquetas"><span>Java 17</span><span>Spring Boot 3.3</span><span>Spring Security</span><span>JWT</span><span>BCrypt</span><span>Spring Data JPA</span></div>
+        </div>
+        <div class="cartao tecnologia">
+          <h4>Front-end</h4>
+          <div class="etiquetas"><span>TypeScript 5.4</span><span>React 18.2</span><span>Vite 5.2</span><span>React Router 6</span></div>
+        </div>
+        <div class="cartao tecnologia">
+          <h4>Banco de dados</h4>
+          <div class="etiquetas"><span>PostgreSQL 16</span><span>Docker</span></div>
+        </div>
+        <div class="cartao tecnologia">
+          <h4>Modelagem e ferramentas</h4>
+          <div class="etiquetas"><span>Astah (UML)</span><span>brModelo</span><span>Git</span><span>IntelliJ IDEA</span><span>VS Code</span></div>
+        </div>
+      </div>
+
+      <h3>Arquitetura da solução</h3>
+      <div class="fluxo" aria-label="Fluxo da arquitetura">
+        <div class="no"><strong>Navegador</strong><span>Interface em React</span></div>
+        <div class="seta">HTTPS · JSON →</div>
+        <div class="no"><strong>Servidor de aplicação</strong><span>API REST em Spring Boot</span></div>
+        <div class="seta">JDBC →</div>
+        <div class="no"><strong>Banco de dados</strong><span>PostgreSQL 16</span></div>
+      </div>
+      <p>A interface é uma aplicação de página única (SPA): o servidor não monta telas, apenas recebe e devolve dados em JSON. O back-end é organizado em camadas: o <em>controller</em> recebe a requisição, o <em>service</em> aplica as regras de negócio e o <em>repository</em> cuida da persistência.</p>
+      <p>A autenticação usa tokens JWT, de modo que o servidor não guarda sessão. As senhas são gravadas apenas como hash BCrypt, e uma conta inativada perde o acesso imediatamente, mesmo que ainda tenha um token válido.</p>
+
+      <figure class="figura">
+        <a href="img/diagramas/implantacao.png" target="_blank" rel="noopener"><img src="img/diagramas/implantacao.png" alt="Diagrama de implantação com o computador do usuário, o servidor de aplicação e o servidor de banco de dados" loading="lazy"></a>
+        <figcaption><strong>Diagrama de Implantação:</strong> o navegador fala com o servidor de aplicação, e só o back-end acessa o banco de dados.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 3. CASOS DE USO E CRONOGRAMA -->
+    <section class="secao" id="casos-de-uso">
+      <div class="secao-cabecalho">
+        <span class="numero-secao">03</span>
+        <h2>Casos de uso e cronograma</h2>
+        <p>O sistema prevê seis casos de uso e dois atores: o Usuário (analista) e o Administrador, que herda as permissões do usuário e acrescenta o gerenciamento de contas.</p>
+      </div>
+
+      <div class="grade grade-3">
+        <article class="cartao caso-uso">
+          <span class="situacao concluido">Implementado</span>
+          <h4>Gerenciar Usuários</h4>
+          <p>Permite ao administrador gerenciar as contas de acesso: listar, criar, editar, ativar ou inativar contas e definir o perfil de acesso. Não há autocadastro: todas as contas são criadas pelo administrador.</p>
+          <p class="ator">Ator: Administrador</p>
+        </article>
+        <article class="cartao caso-uso">
+          <span class="situacao concluido">Implementado</span>
+          <h4>Gerenciar Editais</h4>
+          <p>Permite ao usuário autenticado listar os editais, consultar os detalhes, cadastrar, editar, excluir e aplicar filtros por termo, UF, modalidade e status.</p>
+          <p class="ator">Ator: Usuário</p>
+        </article>
+        <article class="cartao caso-uso">
+          <span class="situacao previsto">Previsto</span>
+          <h4>Cadastrar Perfil da Empresa</h4>
+          <p>Permitirá registrar os dados da organização a que os usuários estão vinculados, preparando a plataforma para uso por mais de uma empresa.</p>
+          <p class="ator">Ator: Administrador</p>
+        </article>
+        <article class="cartao caso-uso">
+          <span class="situacao previsto">Previsto</span>
+          <h4>Acompanhar Logs de Processamento</h4>
+          <p>Permitirá ao administrador consultar o histórico de processamento dos editais, com a situação de cada documento e as mensagens registradas pelo sistema.</p>
+          <p class="ator">Ator: Administrador</p>
+        </article>
+        <article class="cartao caso-uso">
+          <span class="situacao previsto">Previsto</span>
+          <h4>Controlar Alertas de Oportunidade</h4>
+          <p>Permitirá configurar critérios de interesse, como palavras-chave, UF, modalidade e faixa de valor, e receber avisos quando um edital compatível for identificado.</p>
+          <p class="ator">Ator: Usuário</p>
+        </article>
+        <article class="cartao caso-uso">
+          <span class="situacao previsto">Previsto</span>
+          <h4>Gerar Relatório com a IA</h4>
+          <p>Permitirá solicitar a extração automática das informações de um edital, produzindo um relatório com resumo, pontos relevantes, riscos e recomendação, com processamento assíncrono e revisão manual.</p>
+          <p class="ator">Ator: Usuário</p>
+        </article>
+      </div>
+
+      <h3>Cronograma de desenvolvimento</h3>
+      <p>O cronograma original do estágio previa a implementação dos CRUDs para junho de 2026. A implementação foi concluída em agosto, e os casos de uso seguintes foram replanejados conforme a tabela abaixo.</p>
+
+      <div class="cartao tabela">
+        <div class="tabela-rolagem">
+          <table>
+            <thead>
+              <tr><th>Item</th><th>Tipo</th><th>Situação</th><th>Conclusão / previsão</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Documento de Visão, Pedidos do Investidor e Especificação Suplementar</td><td>Documentação</td><td><span class="situacao concluido">Concluído</span></td><td>Mai/2026</td></tr>
+              <tr><td>Diagrama de Caso de Uso, Workflow AS-IS e Glossário</td><td>Documentação</td><td><span class="situacao concluido">Concluído</span></td><td>Jun/2026</td></tr>
+              <tr><td>Especificações dos casos de uso Gerenciar Usuários e Gerenciar Editais</td><td>Documentação</td><td><span class="situacao concluido">Concluído</span></td><td>Ago/2026</td></tr>
+              <tr><td><strong>Gerenciar Usuários</strong></td><td>Caso de uso</td><td><span class="situacao concluido">Concluído</span></td><td>Ago/2026</td></tr>
+              <tr><td><strong>Gerenciar Editais</strong></td><td>Caso de uso</td><td><span class="situacao concluido">Concluído</span></td><td>Ago/2026</td></tr>
+              <tr><td>Painel inicial com os editais de prazo próximo</td><td>Funcionalidade</td><td><span class="situacao concluido">Concluído</span></td><td>Ago/2026</td></tr>
+              <tr><td>Diagramas de classe, entidade e relacionamento, implantação, sequência e estado</td><td>Documentação</td><td><span class="situacao concluido">Concluído</span></td><td>Ago/2026</td></tr>
+              <tr><td>Relatório de Estágio (primeira versão)</td><td>Documentação</td><td><span class="situacao concluido">Concluído</span></td><td>Set/2026</td></tr>
+              <tr><td><strong>Cadastrar Perfil da Empresa</strong></td><td>Caso de uso</td><td><span class="situacao previsto">Previsto</span></td><td>Dez/2026</td></tr>
+              <tr><td><strong>Acompanhar Logs de Processamento</strong></td><td>Caso de uso</td><td><span class="situacao previsto">Previsto</span></td><td>Dez/2026</td></tr>
+              <tr><td>Importação automática de editais do PNCP</td><td>Funcionalidade</td><td><span class="situacao previsto">Previsto</span></td><td>Fev/2027</td></tr>
+              <tr><td><strong>Controlar Alertas de Oportunidade</strong></td><td>Caso de uso</td><td><span class="situacao previsto">Previsto</span></td><td>Mar/2027</td></tr>
+              <tr><td><strong>Gerar Relatório com a IA</strong></td><td>Caso de uso</td><td><span class="situacao previsto">Previsto</span></td><td>Abr/2027</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <details>
+        <summary>Ver o cronograma original do estágio</summary>
+        <p>Planejamento elaborado no início do estágio, de fevereiro a setembro de 2026, dividido em quatro fases: elaboração, definição, execução e controle do projeto.</p>
+        <a href="img/cronograma-original.png" target="_blank" rel="noopener"><img src="img/cronograma-original.png" alt="Cronograma original do estágio em formato de gráfico de Gantt" loading="lazy"></a>
+      </details>
+    </section>
+
+    <!-- 4. DOCUMENTAÇÃO -->
+    <section class="secao" id="documentacao">
+      <div class="secao-cabecalho">
+        <span class="numero-secao">04</span>
+        <h2>Documentação</h2>
+        <p>Diagramas elaborados no Astah (UML) e no brModelo. Cada link abre o diagrama em tamanho original.</p>
+      </div>
+
+      <div class="grade grade-3">
+        <article class="figura diagrama">
+          <a class="miniatura" href="img/diagramas/caso-de-uso.png" target="_blank" rel="noopener"><img src="img/diagramas/caso-de-uso.png" alt="Diagrama de Caso de Uso" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Caso de Uso</h4>
+            <p>Visão funcional completa, com os seis casos de uso e os dois atores do sistema.</p>
+            <div class="links"><a class="botao botao-secundario" href="img/diagramas/caso-de-uso.png" target="_blank" rel="noopener">Abrir imagem</a></div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="docs/diagramas/diagrama-classe.pdf" target="_blank" rel="noopener"><img src="img/diagramas/classe.png" alt="Diagrama de Classe" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Classe</h4>
+            <p>Organização em camadas (controller, service e repository) e as classes previstas para as próximas etapas.</p>
+            <div class="links">
+              <a class="botao botao-secundario" href="docs/diagramas/diagrama-classe.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              <a class="botao botao-secundario" href="img/diagramas/classe.png" target="_blank" rel="noopener">Imagem</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="img/diagramas/der.png" target="_blank" rel="noopener"><img src="img/diagramas/der.png" alt="Diagrama de Entidade e Relacionamento" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Entidade e Relacionamento</h4>
+            <p>Modelo de dados completo, com as tabelas de usuários e editais já implementadas e as tabelas previstas.</p>
+            <div class="links"><a class="botao botao-secundario" href="img/diagramas/der.png" target="_blank" rel="noopener">Abrir imagem</a></div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="img/diagramas/implantacao.png" target="_blank" rel="noopener"><img src="img/diagramas/implantacao.png" alt="Diagrama de Implantação" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Implantação</h4>
+            <p>Distribuição física da solução: navegador, servidor de aplicação e servidor de banco de dados.</p>
+            <div class="links"><a class="botao botao-secundario" href="img/diagramas/implantacao.png" target="_blank" rel="noopener">Abrir imagem</a></div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="docs/diagramas/diagrama-estado-usuario.pdf" target="_blank" rel="noopener"><img src="img/diagramas/estado-usuario.png" alt="Diagrama de Estado do Usuário" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Estado: Usuário</h4>
+            <p>Conta ativa e inativa, com as condições de guarda que protegem a inativação.</p>
+            <div class="links">
+              <a class="botao botao-secundario" href="docs/diagramas/diagrama-estado-usuario.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              <a class="botao botao-secundario" href="img/diagramas/estado-usuario.png" target="_blank" rel="noopener">Imagem</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="docs/diagramas/diagrama-estado-edital.pdf" target="_blank" rel="noopener"><img src="img/diagramas/estado-edital.png" alt="Diagrama de Estado do Edital" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Estado: Edital</h4>
+            <p>Rascunho, publicado, em análise e arquivado, com exclusão possível a partir de qualquer estado.</p>
+            <div class="links">
+              <a class="botao botao-secundario" href="docs/diagramas/diagrama-estado-edital.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              <a class="botao botao-secundario" href="img/diagramas/estado-edital.png" target="_blank" rel="noopener">Imagem</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="docs/diagramas/diagrama-sequencia-usuarios.pdf" target="_blank" rel="noopener"><img src="img/diagramas/sequencia-usuarios.png" alt="Diagrama de Sequência de Gerenciar Usuários" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Sequência: Gerenciar Usuários</h4>
+            <p>Troca de mensagens nos fluxos de criação, edição e alteração de status de uma conta.</p>
+            <div class="links">
+              <a class="botao botao-secundario" href="docs/diagramas/diagrama-sequencia-usuarios.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              <a class="botao botao-secundario" href="img/diagramas/sequencia-usuarios.png" target="_blank" rel="noopener">Imagem</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="docs/diagramas/diagrama-sequencia-editais.pdf" target="_blank" rel="noopener"><img src="img/diagramas/sequencia-editais.png" alt="Diagrama de Sequência de Gerenciar Editais" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Diagrama de Sequência: Gerenciar Editais</h4>
+            <p>Listagem, cadastro, edição, exclusão e aplicação de filtros de busca.</p>
+            <div class="links">
+              <a class="botao botao-secundario" href="docs/diagramas/diagrama-sequencia-editais.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              <a class="botao botao-secundario" href="img/diagramas/sequencia-editais.png" target="_blank" rel="noopener">Imagem</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="figura diagrama">
+          <a class="miniatura" href="img/diagramas/workflow-as-is.png" target="_blank" rel="noopener"><img src="img/diagramas/workflow-as-is.png" alt="Workflow AS-IS em BPMN" loading="lazy"></a>
+          <div class="corpo">
+            <h4>Workflow AS-IS (BPMN)</h4>
+            <p>Processo manual de monitoramento de editais anterior ao sistema.</p>
+            <div class="links"><a class="botao botao-secundario" href="img/diagramas/workflow-as-is.png" target="_blank" rel="noopener">Abrir imagem</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. TELAS E VÍDEO -->
+    <section class="secao" id="telas">
+      <div class="secao-cabecalho">
+        <span class="numero-secao">05</span>
+        <h2>Telas e vídeo</h2>
+        <p>Evidências do funcionamento do sistema nas principais funcionalidades implementadas.</p>
+      </div>
+
+      <div class="grade grade-2">
+        <figure class="figura">
+          <a href="img/telas/login.png" target="_blank" rel="noopener"><img src="img/telas/login.png" alt="Tela de login do LicitaAI" loading="lazy"></a>
+          <figcaption><strong>Login:</strong> acesso com as credenciais criadas pelo administrador. Não há autocadastro.</figcaption>
+        </figure>
+        <figure class="figura">
+          <a href="img/telas/painel.png" target="_blank" rel="noopener"><img src="img/telas/painel.png" alt="Tela do painel inicial" loading="lazy"></a>
+          <figcaption><strong>Painel:</strong> indicadores gerais e os editais que abrem nos próximos 30 dias.</figcaption>
+        </figure>
+        <figure class="figura">
+          <a href="img/telas/editais.png" target="_blank" rel="noopener"><img src="img/telas/editais.png" alt="Tela de gerenciamento de editais" loading="lazy"></a>
+          <figcaption><strong>Editais:</strong> cadastro, listagem, filtros por termo, UF, modalidade e status, edição e exclusão.</figcaption>
+        </figure>
+        <figure class="figura">
+          <a href="img/telas/usuarios.png" target="_blank" rel="noopener"><img src="img/telas/usuarios.png" alt="Tela de gerenciamento de usuários" loading="lazy"></a>
+          <figcaption><strong>Usuários:</strong> criação de contas, definição do perfil de acesso e ativação ou inativação. Restrita ao administrador.</figcaption>
+        </figure>
+      </div>
+
+      <h3>Vídeo de demonstração</h3>
+      <div class="video">
+        <!-- Para publicar o vídeo, troque o conteúdo desta div pelo iframe do YouTube, por exemplo:
+             <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="Demonstração do LicitaAI" allowfullscreen></iframe> -->
+        <div>
+          <strong>Vídeo em produção</strong>
+          <span>Em breve, uma demonstração de até 5 minutos com os fluxos completos do sistema.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. RELATÓRIO DE ESTÁGIO -->
+    <section class="secao" id="relatorio">
+      <div class="secao-cabecalho">
+        <span class="numero-secao">06</span>
+        <h2>Relatório de Estágio</h2>
+      </div>
+
+      <div class="cartao relatorio">
+        <div class="icone">PDF</div>
+        <div class="texto">
+          <h4>Relatório de Estágio · LicitaAI</h4>
+          <p>Introdução, modelagem do sistema, telas, workflow AS-IS, recursos e ambiente de desenvolvimento, cronograma, conclusões e trabalhos futuros.</p>
+          <p>Versão atual: setembro de 2026.</p>
+        </div>
+        <div class="acoes" style="margin-top:0">
+          <a class="botao botao-azul" href="docs/relatorio-estagio-licitaai.pdf" target="_blank" rel="noopener">Visualizar</a>
+          <a class="botao botao-secundario" href="docs/relatorio-estagio-licitaai.pdf" download>Baixar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. IDENTIFICAÇÃO DO ALUNO -->
+    <section class="secao" id="aluno">
+      <div class="secao-cabecalho">
+        <span class="numero-secao">07</span>
+        <h2>Identificação do aluno</h2>
+      </div>
+
+      <div class="cartao identificacao">
+        <dl class="grade grade-2">
+          <div><dt>Nome completo</dt><dd>Mitsuo Nakamura Sena</dd></div>
+          <div><dt>Matrícula</dt><dd>XXXXXXX</dd></div>
+          <div><dt>Professor orientador</dt><dd>Prof. Gustavo Queiroz Silveira</dd></div>
+          <div><dt>Curso</dt><dd>Engenharia de Software</dd></div>
+          <div><dt>Instituição</dt><dd>Centro Universitário Filadélfia (UniFil)</dd></div>
+          <div><dt>Empresa do estágio</dt><dd>Extractta</dd></div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div>
+      <span>LicitaAI · Portfólio do Projeto de Estágio</span>
+      <span>Mitsuo Nakamura Sena · 2026</span>
+    </div>
+  </footer>
+
+</body>
+</html>
